@@ -146,10 +146,6 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <li class="footer-menu-item"><a href="#" class="footer-menu-link">Grebek TBC</a></li>
 
                         <li class="footer-menu-item"><a href="http://wa.me/+6285879475373" class="footer-menu-link">Konsultasi</a></li>
-
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Become a volunteer</a></li>
-
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Partner with us</a></li>
                     </ul>
                 </div>
 

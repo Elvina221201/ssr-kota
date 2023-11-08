@@ -28,10 +28,10 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand text-dark" href="Dashboard" style="font-size:1.3vw">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-return-left" viewBox="0 0 16 16" style="max-width:100%; width:50px;">
+            <a class="navbar-brand text-dark" href="index" style="font-size:1.3vw">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="dark" class="bi bi-arrow-return-left" viewBox="0 0 16 16" style="max-width:100%; width:50px;">
                     <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
-                </svg> kembali 
+                </svg> Back to Home
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
@@ -78,7 +78,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="col-4 text-center" style="padding-top:20%; padding-left:-100%;">
-                                <button type="submit" class="btn btn-success btn-xl text-uppercase text-dark">Masuk!</button>
+                                <button type="submit" class="btn btn-success btn-xl text-uppercase text-light">Masuk!</button>
                             </div>
                         </div>
                     </form>
@@ -91,15 +91,15 @@
     <footer class="footer py-4  bg-dark">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start text-dark">Copyright &copy; 2023 Mentari Sehat Indonesia</div>
+                    <div class="col-lg-4 text-lg-start text-light">Copyright &copy; 2023 Mentari Sehat Indonesia</div>
                     <div class="col-lg-4 my-3 my-lg-0">
                         <a class="btn btn-success btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter text-dark"></i></a>
                         <a class="btn btn-success btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f text-dark"></i></a>
                         <a class="btn btn-success btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in text-dark"></i></a>
                     </div>
                     <div class="col-lg-4 text-lg-end">
-                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
-                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                        <a class="link-light text-decoration-none me-3" href="index">Privacy Policy</a>
+                        <a class="link-light text-decoration-none" href="#!">Terms of Use</a>
                     </div>
                 </div>
             </div>
