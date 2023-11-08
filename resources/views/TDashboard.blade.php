@@ -40,7 +40,7 @@
 
             <hr class="sidebar-divider">
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="Dashboard">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/Dashboard">
                 <div class="sidebar-brand-icon">
                     <img src="img/navbar-logo.png" class="img-thumbnail" alt="...">
                 </div>
@@ -53,7 +53,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="Dashboard">
+                <a class="nav-link" href="/Dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -111,15 +111,16 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Berita</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="InputBerita">Input Berita</a>
-                        <a class="collapse-item" href="KategoriBerita">Kategori</a>
-                        <a class="collapse-item" href="ArsipBerita">Arsip Berita</a>
+                        <a class="collapse-item" href="berita/input">Input Berita</a>
+                        <a class="collapse-item" href="berita/kategori">Kategori</a>
+                        <a class="collapse-item" href="berita/arsip">Arsip Berita</a>
                     </div>
                 </div>
             </li>
@@ -131,11 +132,11 @@
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Kegiatan</span>
                 </a>
-                <div id="kegiatanPages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div id="kegiatanPages" class="collapse" aria-labelledby="headingPages"
+                    data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="#">Seluruh Kegiatan</a>
-                        <a class="collapse-item" href="#">Input Kegiatan</a>
-                        <a class="collapse-item" href="#">Arsip Kegiatan</a>
+                        <a class="collapse-item" href="kegiatan/input">Input Kegiatan</a>
+                        <a class="collapse-item" href="kegiatan/arsip">Arsip Kegiatan</a>
                     </div>
                 </div>
             </li>
@@ -162,7 +163,7 @@
                 <button class="rounded-circle border-0 bg-gray" id="sidebarToggle"></button>
             </div>
 
-            
+
 
         </ul>
         <!-- End of Sidebar -->
@@ -173,142 +174,151 @@
             <!-- Main Content -->
             <div id="content">
 
-                @if(Auth::check())
+                @if (Auth::check())
                     @include('/template-dasar/menuLogin')
                 @endif
                 @yield('konten')
 
-            <!-- Footer -->
-            <footer class="site-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3 col-12 mb-4">
-                            <img src="images/logo_msikota.png" class="logo img-fluid" alt="">
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-12 mb-4">
-                            <h5 class="site-footer-title mb-3">Link Selengkapnya</h5>
-
-                            <ul class="footer-menu">
-                                <li class="footer-menu-item"><a href="#" class="footer-menu-link">Ketuk Pintu</a></li>
-
-                                <li class="footer-menu-item"><a href="#" class="footer-menu-link">Grebek TBC</a></li>
-
-                                <li class="footer-menu-item"><a href="http://wa.me/+6285879475373" class="footer-menu-link">Konsultasi</a></li>
-
-                                <li class="footer-menu-item"><a href="#" class="footer-menu-link">Become a volunteer</a></li>
-
-                                <li class="footer-menu-item"><a href="#" class="footer-menu-link">Partner with us</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-12 mx-auto">
-                            <h5 class="site-footer-title mb-3">Contact Infomation</h5>
-
-                            <p class="text-white d-flex mb-2">
-                                <i class="bi-telephone me-2"></i>
-
-                                <a href="tel: 0858-7947-5373" class="site-footer-link">
-                                    0858-7947-5373
-                                </a>
-                            </p>
-
-                            <p class="text-white d-flex">
-                                <i class="bi-envelope me-2"></i>
-
-                                <a href="mailto: ssrmsikotasemarang@gmail.com" class="site-footer-link">
-                                    ssrmsikotasemarang@gmail.com
-                                </a>
-                            </p>
-
-                            <p class="text-white d-flex mt-3">
-                                <i class="bi-geo-alt me-2"></i>
-                                Jl. Kp. Pentul I No.6, Tinjomoyo, Kec. Banyumanik, Kota Semarang, Jawa Tengah 50262
-                            </p>
-
-                            <a href="#" class="custom-btn btn mt-3">Lainnya</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="site-footer-bottom">
+                <!-- Footer -->
+                <footer class="site-footer">
                     <div class="container">
                         <div class="row">
-
-                            <div class="col-lg-6 col-md-7 col-12">
-                                <p class="copyright-text mb-0">Copyright © 2023 <a href="#">SSR MSI Kota Semarang</a>
-                                </p>
+                            <div class="col-lg-3 col-12 mb-4">
+                                <img src="images/logo_msikota.png" class="logo img-fluid" alt="">
                             </div>
 
-                            <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
-                                <ul class="social-icon">
-                                    <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-twitter"></a>
-                                    </li>
+                            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                                <h5 class="site-footer-title mb-3">Link Selengkapnya</h5>
 
-                                    <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-facebook"></a>
-                                    </li>
+                                <ul class="footer-menu">
+                                    <li class="footer-menu-item"><a href="#" class="footer-menu-link">Ketuk
+                                            Pintu</a></li>
 
-                                    <li class="social-icon-item">
-                                        <a href="https://instagram.com/msikotasemarang?igshid=MzRlODBiNWFlZA==" class="social-icon-link bi-instagram"></a>
-                                    </li>
+                                    <li class="footer-menu-item"><a href="#" class="footer-menu-link">Grebek
+                                            TBC</a></li>
 
-                                    <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-linkedin"></a>
-                                    </li>
+                                    <li class="footer-menu-item"><a href="http://wa.me/+6285879475373"
+                                            class="footer-menu-link">Konsultasi</a></li>
 
-                                    <li class="social-icon-item">
-                                        <a href="https://youtube.com/templatemo" class="social-icon-link bi-youtube"></a>
-                                    </li>
+                                    <li class="footer-menu-item"><a href="#" class="footer-menu-link">Become a
+                                            volunteer</a></li>
+
+                                    <li class="footer-menu-item"><a href="#" class="footer-menu-link">Partner
+                                            with us</a></li>
                                 </ul>
                             </div>
 
+                            <div class="col-lg-4 col-md-6 col-12 mx-auto">
+                                <h5 class="site-footer-title mb-3">Contact Infomation</h5>
+
+                                <p class="text-white d-flex mb-2">
+                                    <i class="bi-telephone me-2"></i>
+
+                                    <a href="tel: 0858-7947-5373" class="site-footer-link">
+                                        0858-7947-5373
+                                    </a>
+                                </p>
+
+                                <p class="text-white d-flex">
+                                    <i class="bi-envelope me-2"></i>
+
+                                    <a href="mailto: ssrmsikotasemarang@gmail.com" class="site-footer-link">
+                                        ssrmsikotasemarang@gmail.com
+                                    </a>
+                                </p>
+
+                                <p class="text-white d-flex mt-3">
+                                    <i class="bi-geo-alt me-2"></i>
+                                    Jl. Kp. Pentul I No.6, Tinjomoyo, Kec. Banyumanik, Kota Semarang, Jawa Tengah 50262
+                                </p>
+
+                                <a href="#" class="custom-btn btn mt-3">Lainnya</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </footer>
 
-            <!-- End of Footer -->
+                    <div class="site-footer-bottom">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-7 col-12">
+                                    <p class="copyright-text mb-0">Copyright © 2023 <a href="#">SSR MSI Kota
+                                            Semarang</a>
+                                    </p>
+                                </div>
+
+                                <div
+                                    class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
+                                    <ul class="social-icon">
+                                        <li class="social-icon-item">
+                                            <a href="#" class="social-icon-link bi-twitter"></a>
+                                        </li>
+
+                                        <li class="social-icon-item">
+                                            <a href="#" class="social-icon-link bi-facebook"></a>
+                                        </li>
+
+                                        <li class="social-icon-item">
+                                            <a href="https://instagram.com/msikotasemarang?igshid=MzRlODBiNWFlZA=="
+                                                class="social-icon-link bi-instagram"></a>
+                                        </li>
+
+                                        <li class="social-icon-item">
+                                            <a href="#" class="social-icon-link bi-linkedin"></a>
+                                        </li>
+
+                                        <li class="social-icon-item">
+                                            <a href="https://youtube.com/templatemo"
+                                                class="social-icon-link bi-youtube"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+                <!-- End of Footer -->
+
+            </div>
+            <!-- End of Content Wrapper -->
 
         </div>
-        <!-- End of Content Wrapper -->
+        <!-- End of Page Wrapper -->
 
-    </div>
-    <!-- End of Page Wrapper -->
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
 
-    
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+        <!-- Page level plugins -->
+        <script src="vendor/chart.js/Chart.min.js"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+        <!-- Page level custom scripts -->
+        <script src="js/demo/chart-area-demo.js"></script>
+        <script src="js/demo/chart-pie-demo.js"></script>
 
-    <!-- JAVASCRIPT FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/click-scroll.js"></script>
-    <script src="js/counter.js"></script>
-    <script src="js/custom.js"></script>
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/click-scroll.js"></script>
+        <script src="js/counter.js"></script>
+        <script src="js/custom.js"></script>
 
-</body>
+        </body>
 
 </html>
