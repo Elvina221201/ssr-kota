@@ -11,5 +11,4 @@
     <div class="container">
         <h1>Halaman Utama</h1>
     </div>
-    
 @endsection

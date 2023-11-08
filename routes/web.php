@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\SessionController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,7 +34,20 @@ Route::get('/admin', function () {
     return view('admin');
 })->name('admin');
 
-Route::get('Dashboard',[AdminController::class, 'Dashboard']);
+Route::middleware('auth')->group(function () {
+    Route::get('Dashboard', [AdminController::class, 'Dashboard']);
+    Route::prefix('berita')->group(function () {
+        Route::get('/arsip', [BeritaController::class, 'index']);
+        Route::get('/input', [BeritaController::class, 'input']);
+        Route::get('/kategori', [BeritaController::class, 'kategoriIndex']);
+    });
+
+    Route::prefix('kegiatan')->group(function () {
+        Route::get('/arsip', [BeritaController::class, 'index']);
+        Route::get('/input', [BeritaController::class, 'input']);
+    });
+});
+
 
 Route::get('Login', [SessionController::class, 'index']);
 Route::post('ProsesLogin', [SessionController::class, 'login']);
