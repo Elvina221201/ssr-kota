@@ -209,17 +209,17 @@
                         <h2>Kontak</h2>
                     </div>
                         <form class="custom-form volunteer-form mb-5 mb-lg-0" action="#" method="post" role="form">
-                            <h3 class="mb-4">Become a volunteer today</h3>
+                            <h3 class="mb-4">Hubungi Kami</h3>
 
                             <div class="row">
                                 <div class="col-lg-6 col-12">
                                     <input type="text" name="volunteer-name" id="volunteer-name" class="form-control"
-                                        placeholder="Jack Doe" required>
+                                        placeholder="Nama" required>
                                 </div>
 
                                 <div class="col-lg-6 col-12">
                                     <input type="email" name="volunteer-email" id="volunteer-email"
-                                        pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Jackdoe@gmail.com"
+                                        pattern="[^ @]*@[^ @]*" class="form-control" placeholder="EmailAnda@gmail.com"
                                         required>
                                 </div>
 
@@ -242,7 +242,7 @@
                             <textarea name="volunteer-message" rows="3" class="form-control" id="volunteer-message"
                                 placeholder="Comment (Optional)"></textarea>
 
-                            <button type="submit" class="form-control">Submit</button>
+                            <button type="submit" class="form-control">Kirim</button>
                         </form>
                 </div>
             </div>
