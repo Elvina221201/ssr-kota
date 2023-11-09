@@ -7,7 +7,7 @@
             @foreach ($kegiatans as $kegiatan)
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="{{ asset('storage/foto/' . $kegiatan->foto) }}" alt="{{ $kegiatan->foto }}">
+                        <img src="{{ asset('storage/kegiatan/' . $kegiatan->foto) }}" alt="{{ $kegiatan->foto }}">
                     </div>
                 </div>
             @endforeach

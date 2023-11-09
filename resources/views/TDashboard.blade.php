@@ -118,9 +118,9 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="input-berita">Input Berita</a>
-                        <a class="collapse-item" href="kategori-berita">Kategori</a>
-                        <a class="collapse-item" href="arsip-berita">Arsip Berita</a>
+                        <a class="collapse-item" href="berita/input">Input Berita</a>
+                        <a class="collapse-item" href="berita/kategori">Kategori</a>
+                        <a class="collapse-item" href="berita/arsip">Arsip Berita</a>
                     </div>
                 </div>
             </li>
@@ -135,8 +135,8 @@
                 <div id="kegiatanPages" class="collapse" aria-labelledby="headingPages"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="input-kegiatan">Input Kegiatan</a>
-                        <a class="collapse-item" href="arsip-kegiatan">Arsip Kegiatan</a>
+                        <a class="collapse-item" href="kegiatan/input">Input Kegiatan</a>
+                        <a class="collapse-item" href="kegiatan/arsip">Arsip Kegiatan</a>
                     </div>
                 </div>
             </li>
