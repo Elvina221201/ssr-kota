@@ -5,25 +5,28 @@
         <h1>Halaman Input Berita</h1>
         <!DOCTYPE html>
         <html lang="en">
+
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="style.css">
             <title>Upload Gambar</title>
         </head>
+
         <body>
-            <div class="container">
-                <h2>Upload Gambar</h2>
-                <form id="form-upload" action="upload.php" method="post" enctype="multipart/form-data">
-                    <input type="file" name="gambar" id="input-gambar" accept="image/*">
-                    <button type="button" onclick="uploadGambar()">Upload</button>
+            <div class="container mt-5">
+                <form action="/berita/store" method="POST" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                    <h2 class="mb-4">Upload Gambar</h2>
+                    <div class="form-group">
+                        <label for="foto">Pilih foto</label>
+                        <input type="file" class="form-control" id="foto" name="foto">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
-                <div id="preview-container">
-                    <img id="preview-gambar" alt="Preview Gambar">
-                </div>
             </div>
-            <script src="script.js"></script>
         </body>
+
         </html>
 
     </div>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\SessionController;
 use Illuminate\Support\Facades\Route;
 
@@ -50,13 +51,15 @@ Route::middleware('auth')->group(function () {
     Route::get('Dashboard', [AdminController::class, 'Dashboard']);
     Route::prefix('berita')->group(function () {
         Route::get('/arsip', [BeritaController::class, 'index']);
-        Route::get('/input', [BeritaController::class, 'input']);
+        Route::get('/input', [BeritaController::class, 'create']);
         Route::get('/kategori', [BeritaController::class, 'kategoriIndex']);
+        Route::post('/store', [BeritaController::class, 'store']);
     });
 
     Route::prefix('kegiatan')->group(function () {
-        Route::get('/arsip', [BeritaController::class, 'index']);
-        Route::get('/input', [BeritaController::class, 'input']);
+        Route::get('/arsip', [KegiatanController::class, 'index']);
+        Route::get('/input', [KegiatanController::class, 'create']);
+        Route::post('/store', [KegiatanController::class, 'store']);
     });
 });
 
