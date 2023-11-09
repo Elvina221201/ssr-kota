@@ -6,7 +6,7 @@
                 <div class="row">
 
                     <div class="col-lg-12 col-12 text-center mb-4">
-                        <h2>Kontak</h2>
+                        <h1>GREBEK TBC</h1>
                     </div>
 
                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">

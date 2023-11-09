@@ -45,19 +45,15 @@ Route::get('/grebek', function () {
 Route::get('/ketuk-pintu', function () {
     return view('ketuk-pintu');
 })->name('ketuk-pintu');
-
 Route::middleware('auth')->group(function () {
     Route::get('Dashboard', [AdminController::class, 'Dashboard']);
-    Route::prefix('berita')->group(function () {
-        Route::get('/arsip', [BeritaController::class, 'index']);
-        Route::get('/input', [BeritaController::class, 'input']);
-        Route::get('/kategori', [BeritaController::class, 'kategoriIndex']);
-    });
+    Route::get('/arsip-berita', [BeritaController::class, 'index']);
+    Route::get('/input-berita', [BeritaController::class, 'input']);
+    Route::get('/kategori-berita', [BeritaController::class, 'kategoriIndex']);
 
-    Route::prefix('kegiatan')->group(function () {
-        Route::get('/arsip', [BeritaController::class, 'index']);
-        Route::get('/input', [BeritaController::class, 'input']);
-    });
+    Route::get('/arsip-kegiatan', [BeritaController::class, 'index']);
+    Route::get('/input-kegiatan', [BeritaController::class, 'input']);
+
 });
 
 
