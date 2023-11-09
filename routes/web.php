@@ -34,6 +34,18 @@ Route::get('/admin', function () {
     return view('admin');
 })->name('admin');
 
+Route::get('/index', function () {
+    return view('index');
+})->name('index');
+
+Route::get('/grebek', function () {
+    return view('grebek');
+})->name('grebek');
+
+Route::get('/ketuk-pintu', function () {
+    return view('ketuk-pintu');
+})->name('ketuk-pintu');
+
 Route::middleware('auth')->group(function () {
     Route::get('Dashboard', [AdminController::class, 'Dashboard']);
     Route::prefix('berita')->group(function () {

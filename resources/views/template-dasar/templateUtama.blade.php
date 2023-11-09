@@ -101,7 +101,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <a class="nav-link click-scroll" href="#section_2">Tentang Kami</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_4">News</a>
+                        <a class="nav-link click-scroll" href="#section_4">Kontak</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -110,14 +110,14 @@ https://templatemo.com/tm-581-kind-heart-charity
                             aria-expanded="false">Program</a>
 
                         <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                            <li><a class="dropdown-item" href="news.html">Grebek TBC</a></li>
+                            <li><a class="dropdown-item" href="grebek">Grebek TBC</a></li>
 
-                            <li><a class="dropdown-item" href="news-detail.html">Ketuk Pintu</a></li>
+                            <li><a class="dropdown-item" href="ketuk-pintu">Ketuk Pintu</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_6">Contact</a>
+                        <a class="nav-link click-scroll" href="#section_6">News</a>
                     </li>
 
                     <li class="nav-item ms-3">
