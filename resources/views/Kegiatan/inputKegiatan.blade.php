@@ -5,7 +5,6 @@
         <h2 class="m-3">Halaman Input Kegiatan</h2>
         <div class="row">
             <div class="col-8 m-3">
-<<<<<<< HEAD
                 <form  method="post" action="/dashboard/posts" enctype="multipart/form-data">
                     @csrf
                     <div class="form-floating mb-3">
@@ -40,15 +39,6 @@
                       </div>
 
                       <button type="submit" class="btn btn-primary mt-4">Tambah</button>
-=======
-                <form  method="post" action="/kegiatan">
-                    @csrf
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control @error('name') is-invalid @enderror" id="title" placeholder="name@example.com" name="name">
-                        <label for="title">Kegiatan</label>
-                    </div>
-                      <button type="submit" class="btn btn-primary mt-2">Tambah</button>
->>>>>>> 9fc4ccfbf981d514e156cbe1be26a4a89c5b211a
                 </form>
             </div>
         </div>
