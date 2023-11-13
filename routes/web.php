@@ -1,10 +1,10 @@
 <?php
 
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\BeritaController;
-use App\Http\Controllers\KegiatanController;
-use App\Http\Controllers\SessionController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PostsController;
+use App\Http\Controllers\SessionController;
+use App\Http\Controllers\KegiatanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,19 +47,14 @@ Route::get('/ketuk-pintu', function () {
     return view('ketuk-pintu');
 })->name('ketuk-pintu');
 Route::middleware('auth')->group(function () {
-    Route::get('Dashboard', [AdminController::class, 'Dashboard']);
-    Route::prefix('berita')->group(function () {
-        Route::get('/arsip', [BeritaController::class, 'index']);
-        Route::get('/input', [BeritaController::class, 'create']);
-        Route::get('/kategori', [BeritaController::class, 'kategoriIndex']);
-        Route::post('/store', [BeritaController::class, 'store']);
-    });
+        Route::get('Dashboard', [AdminController::class, 'Dashboard']);
+        Route::get('/input-berita', [PostsController::class, 'index']);
+        Route::get('/arsip-berita', [PostsController::class, 'show']);
 
-    Route::prefix('kegiatan')->group(function () {
-        Route::get('/arsip', [KegiatanController::class, 'index']);
-        Route::get('/input', [KegiatanController::class, 'create']);
+        Route::get('/input-kegiatan', [KegiatanController::class, 'create']);
+        Route::get('/arsip-kegiatan', [KegiatanController::class, 'index']);
         Route::post('/store', [KegiatanController::class, 'store']);
-    });
+
 });
 
 

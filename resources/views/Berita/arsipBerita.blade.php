@@ -4,13 +4,13 @@
     <div class="container">
         <h2>Arsip Berita</h2>
         <div class="row">
-            @foreach ($beritas as $berita)
+            {{-- @foreach ($beritas as $berita)
                 <div class="col-md-4 mb-4">
                     <div class="card">
                         <img src="{{ asset('storage/berita/' . $berita->foto) }}" alt="{{ $berita->foto }}">
                     </div>
                 </div>
-            @endforeach
+            @endforeach --}}
         </div>
     </div>
 @endsection

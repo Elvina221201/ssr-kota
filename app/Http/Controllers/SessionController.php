@@ -25,10 +25,10 @@ class SessionController extends Controller
         ]);
 
         $infologin = [
-            'name' => $request->name,
+            'email' => $request->name,
             'password'=> $request->password
         ];
-    
+
 
         if (Auth::attempt($infologin)){
             return redirect('/Dashboard')->with('message','Berhasil Login!');

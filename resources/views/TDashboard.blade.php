@@ -11,6 +11,10 @@
 
     <title>Admin Dashboard</title>
 
+    {{-- Trix Editor --}}
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>
+
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -118,9 +122,8 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="berita/input">Input Berita</a>
-                        <a class="collapse-item" href="berita/kategori">Kategori</a>
-                        <a class="collapse-item" href="berita/arsip">Arsip Berita</a>
+                        <a class="collapse-item" href="input-berita">Input Berita</a>
+                        <a class="collapse-item" href="arsip-berita">Arsip Berita</a>
                     </div>
                 </div>
             </li>
