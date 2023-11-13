@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kegiatan;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreKegiatanRequest;
 use App\Http\Requests\UpdateKegiatanRequest;
 
@@ -30,9 +32,13 @@ class KegiatanController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreKegiatanRequest $request)
+    public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'nama' => 'required|max:255',
+        ]);
+        Kegiatan::create($validated);
+        return redirect('/arsip-kegiatan')->with('success', 'Registration is successful, please login');
     }
 
     /**
@@ -41,7 +47,7 @@ class KegiatanController extends Controller
     public function show(Kegiatan $kegiatan)
     {
         return view('Kegiatan.arsipKegiatan', [
-            'kegiatan' => Kegiatan::Latest()->paginate(5)
+            'kegiatan' => Kegiatan::All()
         ]);
     }
 

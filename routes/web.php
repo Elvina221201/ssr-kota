@@ -49,15 +49,16 @@ Route::get('/ketuk-pintu', function () {
 
 Route::middleware('auth')->group(function () {
         Route::get('Dashboard', [AdminController::class, 'Dashboard']);
-        Route::get('/input-berita', [PostsController::class, 'index']);
-        Route::get('/arsip-berita', [PostsController::class, 'show']);
-        Route::post('/berita', [PostsController::class, 'store']);
 
-        Route::get('/input-kegiatan', [KegiatanController::class, 'index']);
-        Route::get('/arsip-kegiatan', [KegiatanController::class, 'show']);
+        Route::get('input-berita', [PostsController::class, 'index']);
+        Route::get('arsip-berita', [PostsController::class, 'show']);
+        Route::post('berita', [PostsController::class, 'store']);
+
+        Route::get('input-kegiatan', [KegiatanController::class, 'index']);
+        Route::post('input-kegiatan', [KegiatanController::class, 'store']);
+        Route::get('arsip-kegiatan', [KegiatanController::class, 'show']);
 });
 
-Route::post('/kegiatan', [KegiatanController::class, 'store']);
 
 
 Route::get('login', [SessionController::class, 'index'])->name("login");
