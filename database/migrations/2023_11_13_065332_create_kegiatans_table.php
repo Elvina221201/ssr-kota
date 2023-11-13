@@ -11,15 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('kegiatans', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('kegiatan_id');
-            $table->foreignId('user_id');
-            $table->string('judul');
-            $table->string('gambar')->nullable();
-            $table->string('excerpt');
-            $table->string('body');
-            $table->timestamp('publised_at')->nullable();
+            $table->string('nama');
             $table->timestamps();
         });
     }
@@ -29,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('kegiatans');
     }
 };

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Posts;
+use Illuminate\Support\Str;
+use Illuminate\Routing\Controller;
 use App\Http\Requests\StorePostsRequest;
 use App\Http\Requests\UpdatePostsRequest;
 
@@ -32,7 +34,22 @@ class PostsController extends Controller
      */
     public function store(StorePostsRequest $request)
     {
-        //
+        $credentials = $request->validate([
+            'judul' => ['required'],
+            'kegiatan_id' => ['required'],
+            'gambar' => 'image|file|max:1024',
+            'body' => ['required'],
+        ]);
+
+        if ($request->file('gambar')) {
+            $credentials['image'] = $request->file('gamabar')->store('post-images');
+        }
+
+        $credentials['user_id'] = auth()->user()->id;
+        $credentials['excerpt'] = Str::limit(strip_tags($request->body), 100);
+        Posts::create($credentials);
+
+        //return redirect('/dashboard/posts')->with('SuccessPosts', 'Post added successfully');
     }
 
     /**
