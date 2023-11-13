@@ -46,6 +46,7 @@ Route::get('/grebek', function () {
 Route::get('/ketuk-pintu', function () {
     return view('ketuk-pintu');
 })->name('ketuk-pintu');
+
 Route::middleware('auth')->group(function () {
         Route::get('Dashboard', [AdminController::class, 'Dashboard']);
         Route::get('/input-berita', [PostsController::class, 'index']);
@@ -54,13 +55,11 @@ Route::middleware('auth')->group(function () {
 
         Route::get('/input-kegiatan', [KegiatanController::class, 'index']);
         Route::get('/arsip-kegiatan', [KegiatanController::class, 'show']);
-
-
 });
 
 Route::post('/kegiatan', [KegiatanController::class, 'store']);
 
 
-Route::get('Login', [SessionController::class, 'index']);
+Route::get('login', [SessionController::class, 'index'])->name("login");
 Route::post('ProsesLogin', [SessionController::class, 'login']);
 Route::get('logout', [SessionController::class, 'logout']);

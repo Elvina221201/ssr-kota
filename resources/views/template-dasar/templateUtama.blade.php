@@ -121,7 +121,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                     </li>
 
                     <li class="nav-item ms-3">
-                        <a class="nav-link custom-btn custom-border-btn btn" href="Login">Login Admin</a>
+                        <a class="nav-link custom-btn custom-border-btn btn" href="login">Login Admin</a>
                     </li>
                 </ul>
             </div>
