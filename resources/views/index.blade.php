@@ -182,32 +182,34 @@
             </div>
         </section>
 
+        <section class="section-padding" id="section_3">
+        <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-12 text-center mb-4">
+                        <h1>Kontak</h1>
+                    </div>
         <section class="cta-section section-padding section-bg">
             <div class="container">
                 <div class="row justify-content-center align-items-center">
 
                     <div class="col-lg-5 col-12 ms-auto">
-                        <h2 class="mb-0">Make an impact. <br> Save lives.</h2>
+                        <h2 class="mb-0"><br></h2>
+                        <h2 class="mb-0"></h2>
+                        <h3 class="mb-0">Alamat : Jl. Kp. Pentul I No.6, Tinjomoyo, Kec. Banyumanik, Kota Semarang, Jawa Tengah 50262 </h3>
+                        <h3 class="mb-0">Nomor Telepon : 085879475373 </h3>
+                        <h3 class="mb-0">Email : ssrmsikotasemarang@gmail.com </h3>
                     </div>
 
                     <div class="col-lg-5 col-12">
-                        <a href="#" class="me-4">Make a donation</a>
+                        <a href="#" class="me-4"></a>
 
-                        <a href="#section_4" class="custom-btn btn smoothscroll">Become a volunteer</a>
+                        <a href="section_3" class="custom-btn btn smoothscroll"></a>
                     </div>
 
                 </div>
             </div>
         </section>
-        
-
-        <section class="section-padding" id="section_3">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-12 col-12 text-center mb-4">
-                        <h2>Kontak</h2>
-                    </div>
                         <form class="custom-form volunteer-form mb-5 mb-lg-0" action="#" method="post" role="form">
                             <h3 class="mb-4">Hubungi Kami</h3>
 
@@ -651,37 +653,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-5 col-12 mx-auto">
-                        <form class="custom-form contact-form" action="#" method="post" role="form">
-                            <h2>Contact form</h2>
-
-                            <p class="mb-4">
-                                <h3>Kirim email konsultasi ke kami: <h3> </p>
-                            <p><a href="https://ayosehat.kemkes.go.id/topik-penyakit/infeksi-pernapasan--tb/tuberkulosis#:~:text=Tuberkulosis%2C%20sering%20disingkat%20TB%20atau,kelenjar%20getah%20bening%2C%20dan%20jantung."> Atau klik disini untuk informasi lengkap tentang TBC</a>
-                            </p>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <input type="text" name="first-name" id="first-name" class="form-control"
-                                        placeholder="Nama Depan" required>
-                                </div>
-
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <input type="text" name="last-name" id="last-name" class="form-control"
-                                        placeholder="Nama Belakang" required>
-                                </div>
-                            </div>
-
-                            <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control"
-                                placeholder="email Anda" required>
-
-                            <textarea name="message" rows="5" class="form-control" id="message"
-                                placeholder="Tulis keluhan Anda disini"></textarea>
-
-                            <button type="submit" class="form-control">Kirim</button>
-                        </form>
-                    </div>
-
                 </div>
             </div>
         </section>

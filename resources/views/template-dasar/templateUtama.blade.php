@@ -63,7 +63,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                         </li>
 
                         <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-youtube"></a>
+                            <a href="https://www.youtube.com/@ssrmsikotasemarang" class="social-icon-link bi-youtube"></a>
                         </li>
 
                         <li class="social-icon-item">
@@ -141,9 +141,9 @@ https://templatemo.com/tm-581-kind-heart-charity
                     <h5 class="site-footer-title mb-3">Link Selengkapnya</h5>
 
                     <ul class="footer-menu">
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Ketuk Pintu</a></li>
+                        <li class="footer-menu-item"><a href="grebek" class="footer-menu-link">Ketuk Pintu</a></li>
 
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Grebek TBC</a></li>
+                        <li class="footer-menu-item"><a href="ketuk-pintu" class="footer-menu-link">Grebek TBC</a></li>
 
                         <li class="footer-menu-item"><a href="http://wa.me/+6285879475373" class="footer-menu-link">Konsultasi</a></li>
                     </ul>
@@ -206,7 +206,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                             </li>
 
                             <li class="social-icon-item">
-                                <a href="https://youtube.com/templatemo" class="social-icon-link bi-youtube"></a>
+                                <a href="Vhttps://www.youtube.com/@ssrmsikotasemarang" class="social-icon-link bi-youtube"></a>
                             </li>
                         </ul>
                     </div>

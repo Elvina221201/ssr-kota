@@ -63,7 +63,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                         </li>
 
                         <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-youtube"></a>
+                            <a href="https://www.youtube.com/@ssrmsikotasemarang" class="social-icon-link bi-youtube"></a>
                         </li>
 
                         <li class="social-icon-item">
