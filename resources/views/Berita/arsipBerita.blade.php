@@ -1,16 +1,44 @@
 @extends('TDashboard')
 
 @section('konten')
-    <div class="container">
-        <h2>Arsip Berita</h2>
+    <div class="container mb-5">
+        <h2 class="m-3">Halaman Arsip Berita</h2>
         <div class="row">
-            {{-- @foreach ($beritas as $berita)
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="{{ asset('storage/berita/' . $berita->foto) }}" alt="{{ $berita->foto }}">
-                    </div>
-                </div>
-            @endforeach --}}
+            <div class="col-8 m-3">
+                <div class="table-responsive small">
+                    <table class="table table-striped table-sm">
+                      <thead>
+                        <tr>
+                          <th scope="col">No.</th>
+                          <th scope="col">Judul</th>
+                          <th scope="col">Category</th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          @foreach ($posts as $post)
+                          <tr>
+                              <td>{{ $loop->iteration }}</td>
+                              <td>{{ $post->judul }}</td>
+                              <td>{{ $post->kegiatan_id }}</td>
+                              <td>
+                                  <a href="" class="btn btn-primary">Detail</a>
+                                  <a href="" class="btn btn-warning">Edit</a>
+
+                                  <form action="" method="post" class="d-inline">
+                                      @method('delete')
+                                      @csrf
+                                      <button class="btn btn-danger" onclick="return confirm('Are you sure')">Delete</button>
+                                  </form>
+                              </td>
+                          </tr>
+                          @endforeach
+                      </tbody>
+                    </table>
+                  </div>
+            </div>
         </div>
-    </div>
+     </div>
+
+
 @endsection

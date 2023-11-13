@@ -138,8 +138,8 @@
                 <div id="kegiatanPages" class="collapse" aria-labelledby="headingPages"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="kegiatan/input">Input Kegiatan</a>
-                        <a class="collapse-item" href="kegiatan/arsip">Arsip Kegiatan</a>
+                        <a class="collapse-item" href="input-kegiatan">Input Kegiatan</a>
+                        <a class="collapse-item" href="arsip-kegiatan">Arsip Kegiatan</a>
                     </div>
                 </div>
             </li>

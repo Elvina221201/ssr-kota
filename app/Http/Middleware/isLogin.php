@@ -18,8 +18,8 @@ class isLogin
     {
         if(Auth::check()){
             return $next($request);
-            
+
         }
-        return redirect('Login')->withErrors(['Silahkan login terlebih dahulu']);
+        return redirect('login')->withErrors(['Silahkan login terlebih dahulu']);
     }
 }
