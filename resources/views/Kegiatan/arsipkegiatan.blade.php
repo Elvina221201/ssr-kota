@@ -22,8 +22,7 @@
                               <td>
                                   <a href="" class="btn btn-warning">Edit</a>
 
-                                  <form action="" method="post" class="d-inline">
-                                      @method('delete')
+                                  <form action="/delete-kegiatan/{{ $keg->id }}" method="post" class="d-inline">
                                       @csrf
                                       <button class="btn btn-danger" onclick="return confirm('Are you sure')">Delete</button>
                                   </form>

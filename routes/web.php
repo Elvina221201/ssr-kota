@@ -56,6 +56,7 @@ Route::middleware('auth')->group(function () {
 
         Route::get('input-kegiatan', [KegiatanController::class, 'index']);
         Route::post('input-kegiatan', [KegiatanController::class, 'store']);
+        Route::post('delete-kegiatan/{id}', [KegiatanController::class, 'destroy']);
         Route::get('arsip-kegiatan', [KegiatanController::class, 'show']);
 });
 

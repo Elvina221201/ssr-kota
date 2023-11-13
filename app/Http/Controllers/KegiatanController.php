@@ -70,8 +70,10 @@ class KegiatanController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Kegiatan $kegiatan)
+    public function destroy(Request $request)
     {
-        //
+
+        Kegiatan::destroy($request->id);
+        return redirect('/arsip-kegiatan')->with('SuccessPosts', 'Kegiatan has been deleted!');
     }
 }
