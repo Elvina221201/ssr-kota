@@ -51,8 +51,8 @@ Route::middleware('auth')->group(function () {
         Route::get('Dashboard', [AdminController::class, 'Dashboard']);
 
         Route::get('input-berita', [PostsController::class, 'index']);
+        Route::post('input-berita', [PostsController::class, 'store']);
         Route::get('arsip-berita', [PostsController::class, 'show']);
-        Route::post('berita', [PostsController::class, 'store']);
 
         Route::get('input-kegiatan', [KegiatanController::class, 'index']);
         Route::post('input-kegiatan', [KegiatanController::class, 'store']);

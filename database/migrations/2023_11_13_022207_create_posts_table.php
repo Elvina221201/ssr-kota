@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('judul');
             $table->string('gambar');
             $table->string('body');
-            $table->timestamp('publised_at');
             $table->timestamps();
         });
     }

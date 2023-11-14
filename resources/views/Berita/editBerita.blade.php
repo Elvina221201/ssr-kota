@@ -2,7 +2,7 @@
 
 @section('konten')
     <div class="container mb-5">
-        <h2 class="m-3">Halaman Input Berita</h2>
+        <h2 class="m-3">Halaman Edit Berita</h2>
         <div class="row">
             <div class="col-8 m-3">
                 <form  method="post" action="/input-berita" enctype="multipart/form-data">
@@ -10,11 +10,6 @@
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control @error('judul') is-invalid @enderror" id="judul" placeholder="name@example.com" name="judul">
                         <label for="judul">Judul</label>
-                        @error('judul')
-                        <div class="invalid-feedback fw-semibold ml-2 mt-2">
-                            {{ $message }}
-                        </div>
-                    @enderror
                     </div>
 
                       <select class="form-select mt-4" aria-label="Default select example" name="kegiatan_id">

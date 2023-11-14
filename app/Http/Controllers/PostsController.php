@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Posts;
+use App\Models\Kegiatan;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use App\Http\Requests\StorePostsRequest;
 use App\Http\Requests\UpdatePostsRequest;
-use App\Models\Kegiatan;
-use App\Models\User;
 
 class PostsController extends Controller
 {
@@ -33,8 +34,9 @@ class PostsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StorePostsRequest $request)
+    public function store(Request $request)
     {
+
         $credentials = $request->validate([
             'judul' => ['required'],
             'kegiatan_id' => ['required'],
@@ -43,14 +45,14 @@ class PostsController extends Controller
         ]);
 
         if ($request->file('gambar')) {
-            $credentials['image'] = $request->file('gamabar')->store('post-images');
+            $credentials['gambar'] = $request->file('gambar')->store('post-images');
         }
 
         $credentials['user_id'] = auth()->user()->id;
-        $credentials['excerpt'] = Str::limit(strip_tags($request->body), 100);
+        //$credentials['excerpt'] = Str::limit(strip_tags($request->body), 100);
         Posts::create($credentials);
 
-        //return redirect('/dashboard/posts')->with('SuccessPosts', 'Post added successfully');
+        return redirect('/arsip-berita')->with('SuccessPosts', 'Post added successfully');
     }
 
     /**
