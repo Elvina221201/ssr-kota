@@ -7,6 +7,8 @@ use Illuminate\Support\Str;
 use Illuminate\Routing\Controller;
 use App\Http\Requests\StorePostsRequest;
 use App\Http\Requests\UpdatePostsRequest;
+use App\Models\Kegiatan;
+use App\Models\User;
 
 class PostsController extends Controller
 {
@@ -16,8 +18,7 @@ class PostsController extends Controller
     public function index()
     {
         return view('Berita.inputBerita', [
-            'title' => 'All Posts',
-            'posts' => Posts::Latest()->paginate(5)
+            'kegiatan' => Kegiatan::all()
         ]);
     }
 

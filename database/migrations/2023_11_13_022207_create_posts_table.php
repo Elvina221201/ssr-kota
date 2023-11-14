@@ -16,10 +16,9 @@ return new class extends Migration
             $table->foreignId('kegiatan_id');
             $table->foreignId('user_id');
             $table->string('judul');
-            $table->string('gambar')->nullable();
-            $table->string('excerpt');
+            $table->string('gambar');
             $table->string('body');
-            $table->timestamp('publised_at')->nullable();
+            $table->timestamp('publised_at');
             $table->timestamps();
         });
     }

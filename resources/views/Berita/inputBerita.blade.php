@@ -13,13 +13,13 @@
                     </div>
 
                       <select class="form-select mt-4" aria-label="Default select example" name="category_id">
-                        {{-- @foreach ($categories as $ct)
-                        @if (old('category_id') == $ct->id)
-                            <option value="{{ $ct->id }}" selected>{{ $ct->name }}</option>
+                        @foreach ($kegiatan as $kg)
+                        @if (old('kegiatan') == $kg->id)
+                            <option value="{{ $kg->id }}" selected>{{ $kg->nama}}</option>
                         @else
-                            <option value="{{ $ct->id }}">{{ $ct->name }}</option>
+                            <option value="{{ $kg->id }}">{{ $kg->nama }}</option>
                         @endif
-                        @endforeach --}}
+                        @endforeach
                       </select>
 
                       <div class="mb-3 mt-2">
