@@ -11,7 +11,7 @@
                         <tr>
                           <th scope="col">No.</th>
                           <th scope="col">Judul</th>
-                          <th scope="col">Category</th>
+                          <th scope="col">Kegiatan</th>
                           <th scope="col">Action</th>
                         </tr>
                       </thead>
@@ -20,9 +20,9 @@
                           <tr>
                               <td>{{ $loop->iteration }}</td>
                               <td>{{ $post->judul }}</td>
-                              <td>{{ $post->kegiatan_id }}</td>
+                              <td>{{ $post->kegiatan->nama }}</td>
                               <td>
-                                  <a href="" class="btn btn-primary">Detail</a>
+                                  <a href="/{{ $post->id }}" class="btn btn-primary">Detail</a>
                                   <a href="" class="btn btn-warning">Edit</a>
 
                                   <form action="" method="post" class="d-inline">

@@ -54,10 +54,13 @@ Route::middleware('auth')->group(function () {
         Route::post('input-berita', [PostsController::class, 'store']);
         Route::get('arsip-berita', [PostsController::class, 'show']);
 
+
         Route::get('input-kegiatan', [KegiatanController::class, 'index']);
         Route::post('input-kegiatan', [KegiatanController::class, 'store']);
         Route::post('delete-kegiatan/{id}', [KegiatanController::class, 'destroy']);
         Route::get('arsip-kegiatan', [KegiatanController::class, 'show']);
+
+        Route::get('{id}', [PostsController::class, 'show_id']);
 });
 
 

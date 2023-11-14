@@ -28,14 +28,10 @@
                       </select>
 
                       <div class="mb-3 mt-2">
-                        <label for="gambar" class="form-label">Pilihlah Gambar</label>
+                        <label for="image" class="form-label">Pilihlah Gambar</label>
                         <img class="img-thumbnail mb-3 img-fluid gambar-thumbnail">
-                        <input class="form-control @error('image') is-invalid @enderror" type="file" id="gambar"  name="gambar" onchange="previewImage()">
-                        @error('image')
-                            <div class="invalid-feedback fw-semibold">
-                                {{ $message }}
-                            </div>
-                        @enderror
+                        <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image" onchange="previewImage()">
+
                       </div>
 
                       <div class="mt-4">
@@ -51,7 +47,7 @@
 <script>
         // Preview Image
         function previewImage() {
-        const image = document.querySelector('#gambar');
+        const image = document.querySelector('#image');
         const priviewImage = document.querySelector('.gambar-thumbnail');
 
         //priviewImage.style.display = 'block';

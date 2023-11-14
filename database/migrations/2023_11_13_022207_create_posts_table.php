@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('kegiatan_id');
             $table->foreignId('user_id');
             $table->string('judul');
-            $table->string('gambar');
+            $table->string('image');
             $table->string('body');
             $table->timestamps();
         });

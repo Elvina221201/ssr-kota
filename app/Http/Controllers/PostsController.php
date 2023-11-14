@@ -40,12 +40,12 @@ class PostsController extends Controller
         $credentials = $request->validate([
             'judul' => ['required'],
             'kegiatan_id' => ['required'],
-            'gambar' => 'image|file|max:1024',
+            'image' => 'image|file|max:1024',
             'body' => ['required'],
         ]);
 
-        if ($request->file('gambar')) {
-            $credentials['gambar'] = $request->file('gambar')->store('post-images');
+        if ($request->file('image')) {
+            $credentials['image'] = $request->file('image')->store('post-images');
         }
 
         $credentials['user_id'] = auth()->user()->id;
@@ -61,8 +61,17 @@ class PostsController extends Controller
     public function show(Posts $posts)
     {
         return view('Berita.arsipBerita', [
-            'title' => 'All Posts',
             'posts' => Posts::Latest()->paginate(5)
+        ]);
+    }
+
+    public function show_id(Request $request)
+    {
+        if (Posts::where('id', $request->id)->first() === null) {
+            abort(404);
+        }
+        return view('Berita.detailBerita', [
+            'post' => Posts::where('id', $request->id)->first()
         ]);
     }
 

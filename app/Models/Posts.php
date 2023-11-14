@@ -13,7 +13,7 @@ class Posts extends Model
     protected $guarded = [''];
 
     // Satu Posts Berelasi Dengan Satu Kegiatan
-    public function categories(): BelongsTo
+    public function kegiatan(): BelongsTo
     {
         return $this->belongsTo(Kegiatan::class, 'kegiatan_id');
     }
