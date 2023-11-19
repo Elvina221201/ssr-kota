@@ -23,7 +23,7 @@
                               <td>{{ $post->kegiatan->nama }}</td>
                               <td>
                                   <a href="/{{ $post->id }}" class="btn btn-primary">Detail</a>
-                                  <a href="" class="btn btn-warning">Edit</a>
+                                  <a href="/edit-berita/{{ $post->id }}" class="btn btn-warning">Edit</a>
 
                                   <form action="/delete-berita/{{ $post->id }}" method="post" class="d-inline">
                                       @csrf

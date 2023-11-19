@@ -16,7 +16,6 @@ class KegiatanController extends Controller
     public function index()
     {
         return view('Kegiatan.inputKegiatan', [
-            'title' => 'All Posts',
             'posts' => Kegiatan::Latest()->paginate(5)
         ]);
     }

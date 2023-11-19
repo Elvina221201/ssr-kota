@@ -28,7 +28,7 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand text-dark" href="index" style="font-size:1.3vw">
+            <a class="navbar-brand text-dark" href="/" style="font-size:1.3vw">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="dark" class="bi bi-arrow-return-left" viewBox="0 0 16 16" style="max-width:100%; width:50px;">
                     <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
                 </svg> Back to Home
@@ -39,13 +39,13 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        
+
                     </ul>
                 </div>
             </div>
         </nav>
 
-    
+
     <!-- form login -->
     <section class="page-section bg-light">
         <div class="container" style="padding-top:7%; padding-bottom:10%">
@@ -64,7 +64,7 @@
                 </ul>
             </div>
             @endif
-                    
+
             <div class="row justify-content-center">
                 <div class="col-sm-4 justify-content-center">
                     <form action="ProsesLogin" method="post">
@@ -72,7 +72,7 @@
                         <div class="form-group">
                             <label class="form-label" for="name">Email or username</label>
                             <input type="name" value="{{ Session::get('name') }}" class="form-control" name="name" id="name" placeholder="Username">
-                            
+
                             <label for="password">Password</label>
                             <input type="password" name="password" id="password" placeholder="Password" required class="form-control">
                         </div>

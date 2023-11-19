@@ -36,7 +36,7 @@
 
                       <div class="mt-4">
                         <input id="body" type="hidden" name="body">
-                        <trix-editor input="body" style="width: 100%; height: 300px;"></trix-editor>
+                        <trix-editor input="body" style="width: 100%; height: 600px;"></trix-editor>
                       </div>
 
                       <button type="submit" class="btn btn-primary mt-4">Tambah</button>

@@ -7,8 +7,8 @@
             <div class="col-8 m-3">
                     <h4>{{ $post->judul }}</h4>
 
-                    <img src="{{ asset('storage/' . $post->image) }}" class="card-img-top" alt="image">
-                    <p class="text-decoration-none text-dark fw-bold">
+                    <img src="{{ asset('storage/' . $post->image) }}" class="card-img-top img-thumbnail shadow rounded-1" alt="image">
+                    <p class="text-decoration-none text-dark fw-bold mt-2">
                         Ditulis Oleh : {{ $post->user->name }}
                     </p>
                 <p>

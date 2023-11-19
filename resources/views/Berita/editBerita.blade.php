@@ -12,7 +12,7 @@
                         <label for="judul">Judul</label>
                     </div>
 
-                      <select class="form-select mt-4" aria-label="Default select example" name="kegiatan_id">
+                      {{-- <select class="form-select mt-4" aria-label="Default select example" name="kegiatan_id">
                         @foreach ($kegiatan as $kg)
                         @if (old('kegiatan_id') == $kg->id)
                             <option value="{{ $kg->id }}" selected>{{ $kg->nama}}</option>
@@ -20,7 +20,7 @@
                             <option value="{{ $kg->id }}">{{ $kg->nama }}</option>
                         @endif
                         @endforeach
-                      </select>
+                      </select> --}}
 
                       <div class="mb-3 mt-2">
                         <label for="gambar" class="form-label">Pilihlah Gambar</label>

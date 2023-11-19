@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\GetKegiatanController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\KegiatanController;
@@ -35,17 +36,9 @@ Route::get('/admin', function () {
     return view('admin');
 })->name('admin');
 
-Route::get('/index', function () {
-    return view('index');
-})->name('index');
+Route::get('/grebek', [GetKegiatanController::class, 'grebek'])->name('grebek');
 
-Route::get('/grebek', function () {
-    return view('grebek');
-})->name('grebek');
-
-Route::get('/ketuk-pintu', function () {
-    return view('ketuk-pintu');
-})->name('ketuk-pintu');
+Route::get('/ketuk-pintu', [GetKegiatanController::class, 'ketuk'])->name('ketuk-pintu');
 
 Route::get('login', [SessionController::class, 'index'])->name("login");
 Route::post('ProsesLogin', [SessionController::class, 'login']);
@@ -58,6 +51,7 @@ Route::middleware('auth')->group(function () {
         Route::post('input-berita', [PostsController::class, 'store']);
         Route::get('arsip-berita', [PostsController::class, 'show']);
         Route::post('delete-berita/{id}', [PostsController::class, 'destroy']);
+        Route::get('edit-berita/{id}', [PostsController::class, 'edit']);
 
 
         Route::get('input-kegiatan', [KegiatanController::class, 'index']);

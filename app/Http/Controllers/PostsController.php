@@ -77,9 +77,12 @@ class PostsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Posts $posts)
+    public function edit(Request $request)
     {
-        //
+        $post = Posts::where('id', $request->id);
+        return view('Berita.editBerita',[
+            'post' => $post
+        ]);
     }
 
     /**

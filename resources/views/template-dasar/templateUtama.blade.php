@@ -94,14 +94,14 @@ https://templatemo.com/tm-581-kind-heart-charity
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#top">Home</a>
+                        <a class="nav-link click-scroll" href="/">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_2">Tentang Kami</a>
+                        <a class="nav-link click-scroll" href="/">Tentang Kami</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_4">Kontak</a>
+                        <a class="nav-link click-scroll" href="/">Kontak</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -117,7 +117,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_6">News</a>
+                        <a class="nav-link click-scroll" href="/">News</a>
                     </li>
 
                     <li class="nav-item ms-3">
