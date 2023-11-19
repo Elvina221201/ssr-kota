@@ -57,6 +57,7 @@ Route::middleware('auth')->group(function () {
         Route::get('input-berita', [PostsController::class, 'index']);
         Route::post('input-berita', [PostsController::class, 'store']);
         Route::get('arsip-berita', [PostsController::class, 'show']);
+        Route::post('delete-berita/{id}', [PostsController::class, 'destroy']);
 
 
         Route::get('input-kegiatan', [KegiatanController::class, 'index']);

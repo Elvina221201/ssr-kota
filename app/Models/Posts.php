@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\User;
 use App\Models\Kegiatan;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -16,5 +17,11 @@ class Posts extends Model
     public function kegiatan(): BelongsTo
     {
         return $this->belongsTo(Kegiatan::class, 'kegiatan_id');
+    }
+
+    // Satu Posts Berelasi Dengan Satu User
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'user_id');
     }
 }

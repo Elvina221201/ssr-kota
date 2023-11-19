@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+
 use App\Models\Posts;
 use App\Models\Kegiatan;
-use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use App\Http\Requests\StorePostsRequest;
 use App\Http\Requests\UpdatePostsRequest;
+use Illuminate\Support\Facades\Storage;
+
 
 class PostsController extends Controller
 {
@@ -37,6 +37,7 @@ class PostsController extends Controller
     public function store(Request $request)
     {
 
+
         $credentials = $request->validate([
             'judul' => ['required'],
             'kegiatan_id' => ['required'],
@@ -44,9 +45,7 @@ class PostsController extends Controller
             'body' => ['required'],
         ]);
 
-        if ($request->file('image')) {
-            $credentials['image'] = $request->file('image')->store('post-images');
-        }
+        $credentials['image'] = $request->file('image')->store('post-images');
 
         $credentials['user_id'] = auth()->user()->id;
         //$credentials['excerpt'] = Str::limit(strip_tags($request->body), 100);
@@ -94,8 +93,14 @@ class PostsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Posts $posts)
+    public function destroy(Request $request)
     {
-        //
+        $post = Posts::findOrFail($request->id);
+
+        Storage::delete($post->image);
+        $post->delete();
+
+        //Posts::destroy($request->id);
+        return redirect('/arsip-berita')->with('SuccessPosts', 'Post has been deleted!');
     }
 }
