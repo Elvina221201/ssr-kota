@@ -47,6 +47,10 @@ Route::get('/ketuk-pintu', function () {
     return view('ketuk-pintu');
 })->name('ketuk-pintu');
 
+Route::get('login', [SessionController::class, 'index'])->name("login");
+Route::post('ProsesLogin', [SessionController::class, 'login']);
+Route::get('logout', [SessionController::class, 'logout']);
+
 Route::middleware('auth')->group(function () {
         Route::get('Dashboard', [AdminController::class, 'Dashboard']);
 
@@ -62,9 +66,3 @@ Route::middleware('auth')->group(function () {
 
         Route::get('{id}', [PostsController::class, 'show_id']);
 });
-
-
-
-Route::get('login', [SessionController::class, 'index'])->name("login");
-Route::post('ProsesLogin', [SessionController::class, 'login']);
-Route::get('logout', [SessionController::class, 'logout']);
