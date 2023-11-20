@@ -18,9 +18,7 @@ use App\Http\Controllers\KegiatanController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+Route::get('/', [GetKegiatanController::class, 'getnews'])->name('index');
 
 /* Pemisah */
 
@@ -40,9 +38,9 @@ Route::get('/grebek', [GetKegiatanController::class, 'grebek'])->name('grebek');
 
 Route::get('/ketuk-pintu', [GetKegiatanController::class, 'ketuk'])->name('ketuk-pintu');
 
+Route::get('logout', [SessionController::class, 'logout']);
 Route::get('login', [SessionController::class, 'index'])->name("login");
 Route::post('ProsesLogin', [SessionController::class, 'login']);
-Route::get('logout', [SessionController::class, 'logout']);
 
 Route::middleware('auth')->group(function () {
         Route::get('Dashboard', [AdminController::class, 'Dashboard']);

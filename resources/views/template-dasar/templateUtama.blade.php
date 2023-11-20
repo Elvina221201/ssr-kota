@@ -9,6 +9,7 @@
     <meta name="author" content="">
 
     <title>SSR MSI Kota Semarang</title>
+    <link rel="icon" href="/images/logo_msikota.png" type="image/x-icon">
 
     <!-- CSS FILES -->
     <link href="css/bootstrap.min.css" rel="stylesheet">

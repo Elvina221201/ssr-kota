@@ -202,9 +202,6 @@
                     </div>
 
                     <div class="col-lg-5 col-12">
-                        <a href="#" class="me-4"></a>
-
-                        <a href="section_3" class="custom-btn btn smoothscroll"></a>
                     </div>
 
                 </div>
@@ -221,28 +218,20 @@
 
                                 <div class="col-lg-6 col-12">
                                     <input type="email" name="volunteer-email" id="volunteer-email"
-                                        pattern="[^ @]*@[^ @]*" class="form-control" placeholder="EmailAnda@gmail.com"
+                                        pattern="[^ @]*@[^ @]*" class="form-control" placeholder="email-anda@gmail.com"
                                         required>
                                 </div>
 
-                                <div class="col-lg-6 col-12">
+                                <div class="col-lg-12 col-12">
                                     <input type="text" name="volunteer-subject" id="volunteer-subject"
                                         class="form-control" placeholder="Subject" required>
                                 </div>
 
-                                <div class="col-lg-6 col-12">
-                                    <div class="input-group input-group-file">
-                                        <input type="file" class="form-control" id="inputGroupFile02">
 
-                                        <label class="input-group-text" for="inputGroupFile02">Upload your CV</label>
-
-                                        <i class="bi-cloud-arrow-up ms-auto"></i>
-                                    </div>
-                                </div>
                             </div>
 
                             <textarea name="volunteer-message" rows="3" class="form-control" id="volunteer-message"
-                                placeholder="Comment (Optional)"></textarea>
+                                placeholder="Koment (Optional)"></textarea>
 
                             <button type="submit" class="form-control">Kirim</button>
                         </form>
@@ -268,25 +257,21 @@
                 <div class="row">
 
                     <div class="col-lg-12 col-12 mb-5">
-                        <h2>Latest News</h2>
+                        <h2>Berita Terbaru</h2>
                     </div>
 
                     <div class="col-lg-7 col-12">
                         <div class="news-block">
                             <div class="news-block-top">
                                 <a href="news-detail.html">
-                                    <img src="images/news/medium-shot-volunteers-with-clothing-donations.jpg"
+                                    <img src="{{ asset('storage/' . $posts[0]->image) }}"
                                         class="news-image img-fluid" alt="">
                                 </a>
 
                                 <div class="news-category-block">
-                                    <a href="#" class="category-block-link">
-                                        Lifestyle,
-                                    </a>
-
-                                    <a href="#" class="category-block-link">
-                                        Clothing Donation
-                                    </a>
+                                    <p class="category-block-link">
+                                        {{ $posts[0]->kegiatan->nama }}
+                                    </p>
                                 </div>
                             </div>
 
@@ -295,33 +280,23 @@
                                     <div class="news-block-date">
                                         <p>
                                             <i class="bi-calendar4 custom-icon me-1"></i>
-                                            October 12, 2036
+                                            {{ $posts[0]->created_at }}
                                         </p>
                                     </div>
 
                                     <div class="news-block-author mx-5">
                                         <p>
                                             <i class="bi-person custom-icon me-1"></i>
-                                            By Admin
-                                        </p>
-                                    </div>
-
-                                    <div class="news-block-comment">
-                                        <p>
-                                            <i class="bi-chat-left custom-icon me-1"></i>
-                                            32 Comments
+                                            By {{ $posts[0]->user->name }}
                                         </p>
                                     </div>
                                 </div>
 
                                 <div class="news-block-title mb-2">
-                                    <h4><a href="news-detail.html" class="news-block-title-link">Clothing donation to
-                                            urban area</a></h4>
+                                    <h4><a href="/" class="news-block-title-link">{{ $posts[0]->judul }}</a></h4>
                                 </div>
 
                                 <div class="news-block-body">
-                                    <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito
-                                        Professional charity theme based on Bootstrap</p>
                                 </div>
                             </div>
                         </div>
@@ -338,29 +313,30 @@
                         </form>
 
                         <h5 class="mt-5 mb-3">Daftar Berita</h5>
-
+                        @foreach ($posts->skip(1) as $post)
                         <div class="news-block news-block-two-col d-flex mt-4">
                             <div class="news-block-two-col-image-wrap">
-                                <a href="news-detail.html">
-                                    <img src="images/news/africa-humanitarian-aid-doctor.jpg"
+                                <a href="/">
+                                    <img src="{{ asset('storage/' . $post->image) }}"
                                         class="news-image img-fluid" alt="">
                                 </a>
                             </div>
 
                             <div class="news-block-two-col-info">
                                 <div class="news-block-title mb-2">
-                                    <h6><a href="news-detail.html" class="news-block-title-link">Food donation area</a>
+                                    <h6><a href="/" class="news-block-title-link">{{ $post->judul }}</a>
                                     </h6>
                                 </div>
 
                                 <div class="news-block-date">
                                     <p>
                                         <i class="bi-calendar4 custom-icon me-1"></i>
-                                        October 16, 2036
+                                        {{ $post->created_at }}
                                     </p>
                                 </div>
                             </div>
                         </div>
+                        @endforeach
                     </div>
 
                 </div>

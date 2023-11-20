@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     <title>Admin Dashboard</title>
+    <link rel="icon" href="/images/logo_msikota.png" type="image/x-icon">
 
     {{-- Trix Editor --}}
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
@@ -46,7 +47,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="Dashboard">
                 <div class="sidebar-brand-icon">
-                    <img src="img/navbar-logo.png" class="img-thumbnail" alt="...">
+                    <img src="/images/logo_msikota.png" class="img-thumbnail" alt="...">
                 </div>
                 <div class="sidebar-brand-text mx-3">SSR Kota Semarang</div>
             </a>

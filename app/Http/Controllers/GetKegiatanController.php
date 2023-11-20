@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 
 class GetKegiatanController extends Controller
 {
+    public function getnews(){
+        return view('index', [
+            'posts' => Posts::all()
+        ]);
+    }
+
     public function grebek(Posts $posts)
     {
 

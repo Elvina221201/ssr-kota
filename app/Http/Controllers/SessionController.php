@@ -33,7 +33,7 @@ class SessionController extends Controller
         if (Auth::attempt($infologin)){
             return redirect('/Dashboard')->with('message','Berhasil Login!');
         }else{
-            return redirect("Login")->withErrors(['email / password yang dimasukkan tidak valid!']);
+            return redirect("/login")->withErrors(['email / password yang dimasukkan tidak valid!']);
         }
     }
 
@@ -41,6 +41,6 @@ class SessionController extends Controller
     {
         Session::flush();
         Auth::logout();
-        return redirect('Login')->with('success','Berhasil logout');
+        return redirect('/login')->with('success','Berhasil logout');
     }
 }
