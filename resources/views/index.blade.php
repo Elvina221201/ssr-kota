@@ -212,25 +212,25 @@
 
                             <div class="row">
                                 <div class="col-lg-6 col-12">
-                                    <input type="text" name="volunteer-name" id="volunteer-name" class="form-control"
+                                    <input type="text" name="nama" id="nama" class="form-control"
                                         placeholder="Nama" required>
                                 </div>
 
                                 <div class="col-lg-6 col-12">
-                                    <input type="email" name="volunteer-email" id="volunteer-email"
+                                    <input type="email" name="email" id="email"
                                         pattern="[^ @]*@[^ @]*" class="form-control" placeholder="email-anda@gmail.com"
                                         required>
                                 </div>
 
                                 <div class="col-lg-12 col-12">
-                                    <input type="text" name="volunteer-subject" id="volunteer-subject"
+                                    <input type="text" name="subject" id="subject"
                                         class="form-control" placeholder="Subject" required>
                                 </div>
 
 
                             </div>
 
-                            <textarea name="volunteer-message" rows="3" class="form-control" id="volunteer-message"
+                            <textarea name="message" rows="3" class="form-control" id="message"
                                 placeholder="Koment (Optional)"></textarea>
 
                             <button type="submit" class="form-control">Kirim</button>
@@ -259,7 +259,7 @@
                     <div class="col-lg-12 col-12 mb-5">
                         <h2>Berita Terbaru</h2>
                     </div>
-
+                    @if ($posts->count())
                     <div class="col-lg-7 col-12">
                         <div class="news-block">
                             <div class="news-block-top">
@@ -338,6 +338,9 @@
                         </div>
                         @endforeach
                     </div>
+                    @else
+                        <h3 class="text-center fs-4">Belum Ada Berita!</h3>
+                    @endif
 
                 </div>
             </div>

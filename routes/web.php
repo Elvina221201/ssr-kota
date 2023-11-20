@@ -6,6 +6,7 @@ use App\Http\Controllers\GetKegiatanController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\KegiatanController;
+use App\Http\Controllers\PesanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,5 +59,7 @@ Route::middleware('auth')->group(function () {
         Route::post('input-kegiatan', [KegiatanController::class, 'store']);
         Route::post('delete-kegiatan/{id}', [KegiatanController::class, 'destroy']);
         Route::get('arsip-kegiatan', [KegiatanController::class, 'show']);
+
+        Route::get('pesan', [PesanController::class, 'index']);
 
 });

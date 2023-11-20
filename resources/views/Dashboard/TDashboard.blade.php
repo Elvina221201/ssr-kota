@@ -147,9 +147,9 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="inbox">
+                <a class="nav-link" href="/pesan">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Inbox</span></a>
+                    <span>Pesan</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
