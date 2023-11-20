@@ -207,7 +207,8 @@
                 </div>
             </div>
         </section>
-                        <form class="custom-form volunteer-form mb-5 mb-lg-0" action="#" method="post" role="form">
+                        <form class="custom-form volunteer-form mb-5 mb-lg-0" action="/input-pesan" method="post" role="form">
+                            @csrf
                             <h3 class="mb-4">Hubungi Kami</h3>
 
                             <div class="row">

@@ -63,3 +63,5 @@ Route::middleware('auth')->group(function () {
         Route::get('pesan', [PesanController::class, 'index']);
 
 });
+
+Route::post('input-pesan', [PesanController::class, 'store']);

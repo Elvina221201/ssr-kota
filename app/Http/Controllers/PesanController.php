@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Pesan;
 use App\Http\Requests\StorePesanRequest;
+use Illuminate\Http\Request;
 use App\Http\Requests\UpdatePesanRequest;
 
 class PesanController extends Controller
@@ -29,9 +30,18 @@ class PesanController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StorePesanRequest $request)
+    public function store(Request $request)
     {
-        //
+        $credentials = $request->validate([
+            'nama' => ['required'],
+            'email' => ['required'],
+            'subject' => ['required'],
+            'message' => ['required'],
+        ]);
+
+        Pesan::create($credentials);
+
+        return redirect('/')->with('Berhasil', 'Pesan Berhasil Dikirim');
     }
 
     /**

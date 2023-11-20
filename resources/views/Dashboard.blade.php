@@ -53,7 +53,7 @@
                         <div class="col mr-2">
                             <div class="text-md font-weight-bold text-primary text-uppercase mb-1">
                                Total Pesan</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">10</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $jumlahPesan }}</div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-comments fa-2x text-gray-300"></i>

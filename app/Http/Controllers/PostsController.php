@@ -36,8 +36,6 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-
-
         $credentials = $request->validate([
             'judul' => ['required'],
             'kegiatan_id' => ['required'],
