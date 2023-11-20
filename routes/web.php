@@ -61,7 +61,7 @@ Route::middleware('auth')->group(function () {
         Route::get('arsip-kegiatan', [KegiatanController::class, 'show']);
 
         Route::get('pesan', [PesanController::class, 'index']);
-        Route::get('detail-pesan/{id}', [PostsController::class, 'show']);
+        Route::get('detail-pesan/{id}', [PesanController::class, 'show']);
         Route::post('delete-pesan/{id}', [PesanController::class, 'destroy']);
 
 });

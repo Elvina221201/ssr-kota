@@ -47,9 +47,11 @@ class PesanController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Pesan $pesan)
+    public function show(Request $request)
     {
-        //
+        return view('Dashboard.Pesan.detailPesan', [
+            'pesan' => Pesan::where('id', $request->id)->first()
+        ]);
     }
 
     /**
