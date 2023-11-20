@@ -16,7 +16,7 @@
     <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
@@ -24,12 +24,12 @@
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.css" rel="stylesheet">
     <!-- CSS FILES -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="/css/bootstrap-icons.css" rel="stylesheet">
 
-    <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
-    <!--
+    <link href="/css/templatemo-kind-heart-charity.css" rel="stylesheet">
+
 
 </head>
 
@@ -44,7 +44,7 @@
 
             <hr class="sidebar-divider">
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/Dashboard">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="Dashboard">
                 <div class="sidebar-brand-icon">
                     <img src="img/navbar-logo.png" class="img-thumbnail" alt="...">
                 </div>
@@ -122,8 +122,8 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="input-berita">Input Berita</a>
-                        <a class="collapse-item" href="arsip-berita">Arsip Berita</a>
+                        <a class="collapse-item" href="/input-berita">Input Berita</a>
+                        <a class="collapse-item" href="/arsip-berita">Arsip Berita</a>
                     </div>
                 </div>
             </li>
@@ -138,8 +138,8 @@
                 <div id="kegiatanPages" class="collapse" aria-labelledby="headingPages"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="input-kegiatan">Input Kegiatan</a>
-                        <a class="collapse-item" href="arsip-kegiatan">Arsip Kegiatan</a>
+                        <a class="collapse-item" href="/input-kegiatan">Input Kegiatan</a>
+                        <a class="collapse-item" href="/arsip-kegiatan">Arsip Kegiatan</a>
                     </div>
                 </div>
             </li>
@@ -178,7 +178,7 @@
             <div id="content">
 
                 @if (Auth::check())
-                    @include('/template-dasar/menuLogin')
+                    @include('./template-dasar/menuLogin')
                 @endif
                 @yield('konten')
 
@@ -298,29 +298,29 @@
 
 
         <!-- Bootstrap core JavaScript-->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="/vendor/jquery/jquery.min.js"></script>
+        <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
         <!-- Core plugin JavaScript-->
-        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
 
         <!-- Custom scripts for all pages-->
-        <script src="js/sb-admin-2.min.js"></script>
+        <script src="/js/sb-admin-2.min.js"></script>
 
         <!-- Page level plugins -->
-        <script src="vendor/chart.js/Chart.min.js"></script>
+        <script src="/vendor/chart.js/Chart.min.js"></script>
 
         <!-- Page level custom scripts -->
-        <script src="js/demo/chart-area-demo.js"></script>
-        <script src="js/demo/chart-pie-demo.js"></script>
+        <script src="/js/demo/chart-area-demo.js"></script>
+        <script src="/js/demo/chart-pie-demo.js"></script>
 
         <!-- JAVASCRIPT FILES -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.sticky.js"></script>
-        <script src="js/click-scroll.js"></script>
-        <script src="js/counter.js"></script>
-        <script src="js/custom.js"></script>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/jquery.sticky.js"></script>
+        <script src="/js/click-scroll.js"></script>
+        <script src="/js/counter.js"></script>
+        <script src="/js/custom.js"></script>
 
         </body>
 

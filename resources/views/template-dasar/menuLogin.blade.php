@@ -13,10 +13,6 @@
 <ul class="navbar-nav ml-auto">
 
 
-
-
-
-
     <div class="topbar-divider bg-dark d-none d-sm-block"></div>
 
     <!-- Nav Item - User Information -->

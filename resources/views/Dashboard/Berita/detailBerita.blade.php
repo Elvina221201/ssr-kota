@@ -1,4 +1,4 @@
-@extends('TDashboard')
+@extends('Dashboard.TDashboard')
 
 @section('konten')
     <div class="container mb-5">

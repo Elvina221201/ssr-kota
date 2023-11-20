@@ -51,7 +51,9 @@ Route::middleware('auth')->group(function () {
         Route::post('input-berita', [PostsController::class, 'store']);
         Route::get('arsip-berita', [PostsController::class, 'show']);
         Route::post('delete-berita/{id}', [PostsController::class, 'destroy']);
+        Route::get('detail-berita/{id}', [PostsController::class, 'show_id']);
         Route::get('edit-berita/{id}', [PostsController::class, 'edit']);
+        Route::post('edit-berita/{id}', [PostsController::class, 'update']);
 
 
         Route::get('input-kegiatan', [KegiatanController::class, 'index']);
@@ -59,5 +61,4 @@ Route::middleware('auth')->group(function () {
         Route::post('delete-kegiatan/{id}', [KegiatanController::class, 'destroy']);
         Route::get('arsip-kegiatan', [KegiatanController::class, 'show']);
 
-        Route::get('{id}', [PostsController::class, 'show_id']);
 });

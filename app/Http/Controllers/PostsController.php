@@ -18,7 +18,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        return view('Berita.inputBerita', [
+        return view('Dashboard.Berita.inputBerita', [
             'kegiatan' => Kegiatan::all()
         ]);
     }
@@ -59,17 +59,15 @@ class PostsController extends Controller
      */
     public function show(Posts $posts)
     {
-        return view('Berita.arsipBerita', [
+        return view('Dashboard.Berita.arsipBerita', [
             'posts' => Posts::Latest()->paginate(5)
         ]);
     }
 
     public function show_id(Request $request)
     {
-        if (Posts::where('id', $request->id)->first() === null) {
-            abort(404);
-        }
-        return view('Berita.detailBerita', [
+
+        return view('Dashboard.Berita.detailBerita', [
             'post' => Posts::where('id', $request->id)->first()
         ]);
     }
@@ -79,18 +77,42 @@ class PostsController extends Controller
      */
     public function edit(Request $request)
     {
-        $post = Posts::where('id', $request->id);
-        return view('Berita.editBerita',[
-            'post' => $post
+        return view('Dashboard.Berita.editBerita',[
+            'post' => Posts::where('id', $request->id)->first(),
+            'kegiatan' => Kegiatan::All()
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdatePostsRequest $request, Posts $posts)
+    public function update(Request $request)
     {
-        //
+        $post = Posts::findOrFail($request->id);
+
+        $rules = [
+            'judul' => ['required'],
+            'kegiatan_id' => ['required'],
+            'image' => 'image|file|max:1024',
+            'body' => ['required'],
+        ];
+
+        $credentials = $request->validate($rules);
+
+        // Jika Update Image
+        if ($request->file('image')) {
+            if ($post->image != null) {
+                    Storage::delete($post->image);
+            }
+            $credentials['image'] = $request->file('image')->store('post-images');
+        }
+
+        $credentials['user_id'] = auth()->user()->id;
+
+        Posts::where('id', $post->id)
+                ->update($credentials);
+
+        return redirect('/arsip-berita')->with('SuccessPosts', 'Post has been updated!');
     }
 
     /**

@@ -15,7 +15,7 @@ class KegiatanController extends Controller
      */
     public function index()
     {
-        return view('Kegiatan.inputKegiatan', [
+        return view('Dashboard.Kegiatan.inputKegiatan', [
             'posts' => Kegiatan::Latest()->paginate(5)
         ]);
     }
@@ -45,7 +45,7 @@ class KegiatanController extends Controller
      */
     public function show(Kegiatan $kegiatan)
     {
-        return view('Kegiatan.arsipKegiatan', [
+        return view('Dashboard.Kegiatan.arsipKegiatan', [
             'kegiatan' => Kegiatan::All()
         ]);
     }
