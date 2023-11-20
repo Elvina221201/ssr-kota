@@ -255,40 +255,8 @@
                 <div class="row">
 
                     <div class="col-lg-6 col-12">
-                        <h1 class="text-white mb-4">PROGRAM UNGGULAN</h1>
-                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                            <div class="custom-block-wrap">
-                                <img src="images/causes/group-african-kids-paying-attention-class.jpg"
-                                    class="custom-block-image img-fluid" alt="">
-
-                                <div class="custom-block">
-                                    <div class="custom-block-body">
-                                        <h5 class="mb-3">Grebek TBC</h5>
-
-                                        <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito</p>
-
-                                        <div class="progress mt-4">
-                                            <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
-                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-
-                                        <div class="d-flex align-items-center my-2">
-                                            <p class="mb-0">
-                                                <strong>Raised:</strong>
-                                                $18,500
-                                            </p>
-
-                                            <p class="ms-auto mb-0">
-                                                <strong>Goal:</strong>
-                                                $32,000
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                                </div>
-                            </div>
+                        <h1 class="text-white mb-4">DONASI</h1>
+                        <h3 class="text-white">Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito</h3>
                     </div>
                 </div>
             </div>
@@ -358,63 +326,6 @@
                             </div>
                         </div>
 
-                        <div class="news-block mt-3">
-                            <div class="news-block-top">
-                                <a href="news-detail.html">
-                                    <img src="images/news/medium-shot-people-collecting-foodstuff.jpg"
-                                        class="news-image img-fluid" alt="">
-                                </a>
-
-                                <div class="news-category-block">
-                                    <a href="#" class="category-block-link">
-                                        Food,
-                                    </a>
-
-                                    <a href="#" class="category-block-link">
-                                        Donation,
-                                    </a>
-
-                                    <a href="#" class="category-block-link">
-                                        Caring
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="news-block-info">
-                                <div class="d-flex mt-2">
-                                    <div class="news-block-date">
-                                        <p>
-                                            <i class="bi-calendar4 custom-icon me-1"></i>
-                                            October 20, 2036
-                                        </p>
-                                    </div>
-
-                                    <div class="news-block-author mx-5">
-                                        <p>
-                                            <i class="bi-person custom-icon me-1"></i>
-                                            By Admin
-                                        </p>
-                                    </div>
-
-                                    <div class="news-block-comment">
-                                        <p>
-                                            <i class="bi-chat-left custom-icon me-1"></i>
-                                            35 Comments
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="news-block-title mb-2">
-                                    <h4><a href="news-detail.html" class="news-block-title-link">Food donation area</a>
-                                    </h4>
-                                </div>
-
-                                <div class="news-block-body">
-                                    <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam quis metus
-                                        elementum, tempor risus vel, condimentum orci</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                     <div class="col-lg-4 col-12 mx-auto">
@@ -426,7 +337,7 @@
                             </button>
                         </form>
 
-                        <h5 class="mt-5 mb-3">Recent news</h5>
+                        <h5 class="mt-5 mb-3">Daftar Berita</h5>
 
                         <div class="news-block news-block-two-col d-flex mt-4">
                             <div class="news-block-two-col-image-wrap">
@@ -450,101 +361,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="news-block news-block-two-col d-flex mt-4">
-                            <div class="news-block-two-col-image-wrap">
-                                <a href="news-detail.html">
-                                    <img src="images/news/close-up-happy-people-working-together.jpg"
-                                        class="news-image img-fluid" alt="">
-                                </a>
-                            </div>
-
-                            <div class="news-block-two-col-info">
-                                <div class="news-block-title mb-2">
-                                    <h6><a href="news-detail.html" class="news-block-title-link">Volunteering Clean</a>
-                                    </h6>
-                                </div>
-
-                                <div class="news-block-date">
-                                    <p>
-                                        <i class="bi-calendar4 custom-icon me-1"></i>
-                                        October 24, 2036
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="category-block d-flex flex-column">
-                            <h5 class="mb-3">Categories</h5>
-
-                            <a href="#" class="category-block-link">
-                                Drinking water
-                                <span class="badge">20</span>
-                            </a>
-
-                            <a href="#" class="category-block-link">
-                                Food Donation
-                                <span class="badge">30</span>
-                            </a>
-
-                            <a href="#" class="category-block-link">
-                                Children Education
-                                <span class="badge">10</span>
-                            </a>
-
-                            <a href="#" class="category-block-link">
-                                Poverty Development
-                                <span class="badge">15</span>
-                            </a>
-
-                            <a href="#" class="category-block-link">
-                                Clothing Donation
-                                <span class="badge">20</span>
-                            </a>
-                        </div>
-
-                        <div class="tags-block">
-                            <h5 class="mb-3">Tags</h5>
-
-                            <a href="#" class="tags-block-link">
-                                Donation
-                            </a>
-
-                            <a href="#" class="tags-block-link">
-                                Clothing
-                            </a>
-
-                            <a href="#" class="tags-block-link">
-                                Food
-                            </a>
-
-                            <a href="#" class="tags-block-link">
-                                Children
-                            </a>
-
-                            <a href="#" class="tags-block-link">
-                                Education
-                            </a>
-
-                            <a href="#" class="tags-block-link">
-                                Poverty
-                            </a>
-
-                            <a href="#" class="tags-block-link">
-                                Clean Water
-                            </a>
-                        </div>
-
-                        <form class="custom-form subscribe-form" action="#" method="post" role="form">
-                            <h5 class="mb-4">Newsletter Form</h5>
-
-                            <input type="email" name="subscribe-email" id="subscribe-email" pattern="[^ @]*@[^ @]*"
-                                class="form-control" placeholder="Email Address" required>
-
-                            <div class="col-lg-12 col-12">
-                                <button type="submit" class="form-control">Subscribe</button>
-                            </div>
-                        </form>
                     </div>
 
                 </div>
@@ -618,44 +434,7 @@
 
 <!--  Mulai Section -->
 
-        <section class="contact-section section-padding" id="section_6">
-            <div class="container">
-                <div class="row">
 
-                    <div class="col-lg-4 col-12 ms-auto mb-5 mb-lg-0">
-                        <div class="contact-info-wrap">
-
-                            <div class="contact-info">
-                                <h5 class="mb-3">Contact Infomation</h5>
-
-                                <p class="d-flex mb-2">
-                                    <i class="bi-geo-alt me-2"></i>
-                                    Jl. Kp. Pentul I No.6, Tinjomoyo, Kec. Banyumanik, Kota Semarang, Jawa Tengah 50262
-                                </p>
-
-                                <p class="d-flex mb-2">
-                                    <i class="bi-telephone me-2"></i>
-
-                                    <a href="http://wa.me/+62858794753733">
-                                        0858-7947-5373
-                                    </a>
-                                </p>
-
-                                <p class="d-flex">
-                                    <i class="bi-envelope me-2"></i>
-
-                                    <a href="mailto: ssrmsikotasemarang@gmail.com">
-                                        ssrmsikotasemarang@gmail.com
-                                    </a>
-                                </p>
-
-                                <a href="#" class="custom-btn btn mt-3">Get Direction</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
 @endsection

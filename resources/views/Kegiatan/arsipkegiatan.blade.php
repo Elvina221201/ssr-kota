@@ -2,7 +2,7 @@
 
 @section('konten')
     <div class="container mb-5">
-        <h2 class="m-3">Halaman Arsip Berita</h2>
+        <h2 class="m-3">Halaman Arsip Kegiatan</h2>
         <div class="row">
             <div class="col-8 m-3">
                 <div class="table-responsive small">
