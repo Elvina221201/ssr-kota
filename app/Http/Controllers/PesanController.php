@@ -71,8 +71,10 @@ class PesanController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Pesan $pesan)
+    public function destroy(Request $request)
     {
-        //
+        $pesan = Pesan::findOrFail($request->id);
+        $pesan->delete();
+        return redirect('/pesan')->with('SuccessPosts', 'Post has been deleted!');
     }
 }

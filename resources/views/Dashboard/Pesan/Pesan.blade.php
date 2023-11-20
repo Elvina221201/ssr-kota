@@ -22,8 +22,8 @@
                               <td>{{ $psn->nama }}</td>
                               <td>{{ $psn->subject }}</td>
                               <td>
-                                  <a href="/detail-berita/{{ $psn->id }}" class="btn btn-primary">Detail</a>
-                                  <form action="/delete-berita/{{ $psn->id }}" method="post" class="d-inline">
+                                  <a href="/detail-pesan/{{ $psn->id }}" class="btn btn-primary">Detail</a>
+                                  <form action="/delete-pesan/{{ $psn->id }}" method="post" class="d-inline">
                                       @csrf
                                       <button class="btn btn-danger" onclick="return confirm('Are you sure')">Delete</button>
                                   </form>
