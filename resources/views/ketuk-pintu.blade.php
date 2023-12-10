@@ -23,7 +23,7 @@
 
                                 </div>
 
-                                <a href="/" class="custom-btn btn rounded-pill">Baca Selengkapnya...</a>
+                                <a href="/detail/{{ $post->id }}" class="custom-btn btn rounded-pill">Baca Selengkapnya...</a>
                             </div>
                         </div>
                     </div>

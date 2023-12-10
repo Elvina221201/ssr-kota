@@ -61,4 +61,10 @@ class GetKegiatanController extends Controller
             ]);
         }
     }
+
+    public function show_id(Request $request){
+        return view('detail', [
+            'post' => Posts::where('id', $request->id)->first()
+        ]);
+    }
 }

@@ -264,7 +264,7 @@
                     <div class="col-lg-7 col-12">
                         <div class="news-block">
                             <div class="news-block-top">
-                                <a href="news-detail.html">
+                                <a href="/detail/{{ $posts[0]->id }}">
                                     <img src="{{ asset('storage/' . $posts[0]->image) }}"
                                         class="news-image img-fluid" alt="">
                                 </a>
@@ -294,7 +294,7 @@
                                 </div>
 
                                 <div class="news-block-title mb-2">
-                                    <h4><a href="/" class="news-block-title-link">{{ $posts[0]->judul }}</a></h4>
+                                    <h4><a href="/detail/{{ $posts[0]->id }}" class="news-block-title-link">{{ $posts[0]->judul }}</a></h4>
                                 </div>
 
                                 <div class="news-block-body">
@@ -317,7 +317,7 @@
                         @foreach ($posts->skip(1) as $post)
                         <div class="news-block news-block-two-col d-flex mt-4">
                             <div class="news-block-two-col-image-wrap">
-                                <a href="/">
+                                <a href="/detail/{{ $post->id }}">
                                     <img src="{{ asset('storage/' . $post->image) }}"
                                         class="news-image img-fluid" alt="">
                                 </a>
@@ -325,7 +325,7 @@
 
                             <div class="news-block-two-col-info">
                                 <div class="news-block-title mb-2">
-                                    <h6><a href="/" class="news-block-title-link">{{ $post->judul }}</a>
+                                    <h6><a href="/detail/{{ $post->id }}" class="news-block-title-link">{{ $post->judul }}</a>
                                     </h6>
                                 </div>
 

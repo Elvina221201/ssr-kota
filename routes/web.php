@@ -39,8 +39,11 @@ Route::get('/grebek', [GetKegiatanController::class, 'grebek'])->name('grebek');
 
 Route::get('/ketuk-pintu', [GetKegiatanController::class, 'ketuk'])->name('ketuk-pintu');
 
-Route::get('logout', [SessionController::class, 'logout']);
-Route::get('login', [SessionController::class, 'index'])->name("login");
+Route::get('/detail/{id}', [GetKegiatanController::class, 'show_id'])->name('detail');
+
+
+Route::get('/logout', [SessionController::class, 'logout']);
+Route::get('/login', [SessionController::class, 'index'])->name("login");
 Route::post('ProsesLogin', [SessionController::class, 'login']);
 
 Route::middleware('auth')->group(function () {
